@@ -41,6 +41,10 @@ parts:
     - file: exercises/L4-ex02
     - file: exercises/L4-ex03
     - file: exercises/L4-ex04
+  - caption: Appendices
+    chapters:
+    - file: appendix
+ 
 
 
 
