@@ -21,8 +21,14 @@ Use a `card` at the beginning of each lesson to state the learning objectives:
 * Objective 1
 * Objective 2
 
+**Topics:**
+
+{bdg-dark}`topic 1`
+{bdg-dark}`topic 2`
+{bdg-dark}`topic n`
+
 +++
-Materials:
+**Materials:**
 
 * A list of additional materials related to the lesson for the instructor. 
 * For example: slides.
@@ -36,7 +42,12 @@ Rendered as:
 
 * Objective 1
 * Objective 2
+  
+**Topics:**
 
+{bdg-dark}`topic 1`
+{bdg-dark}`topic 2`
+{bdg-dark}`topic n`
 +++
 Materials:
 * *[Collaborative software development](https://docs.google.com/presentation/d/1yBy_4r9aHhsUH9AH1s7zLWIQ_h20xNKVYM1somPnz1Q/edit?usp=sharing)*
@@ -47,17 +58,33 @@ Materials:
 Lessons may include explanations or instructions for the instructor. Use the following admonition for including *instructor's notes*:
 
 ```md
-:::{admonition} Instructor's Note 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 <Content>
 :::
 ```
 Rendered as:
 
-:::{admonition} Instructor's Note 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 *The content in italics*
 :::
+
+### Time Estimates
+Time estimates for each section, subsection or exercise should be included to indicate how much time the instructor has for a particular activity. Use the following format:
+
+````md
+
+### Section/Exercise Title
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`5 min`
+
+````
+
+Rendered as:
+
+### Section Title
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`5 min`
+
 
 ### Figures
 

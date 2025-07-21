@@ -47,22 +47,22 @@ The learning objectives and topics of each lesson are presented below. The taxon
 - To organise tracked changes in the Git history. (*understand*)
 
 ```{dropdown} Topics
-| Episode | Topic |
-|:----|:----|
-| **1.1** | **Git repositories for version control** | 
-|  | Introduction to Git | 
-|  | Git command syntax and getting help | 
-|  | Creating an empty repository | 
-| **1.2** | **Tracking changes in working documents** | 
-|  | Tracking changes with the index | 
-|  | Not tracking and stop tracking | 
-|  | Undoing changes with the index | 
-|  | Deleting and renaming tracked files and directories  | 
-| **1.3** | **Organising tracked changes in a history** | 
-|  | Committing changes with a configured identity and a message | 
-|  | Inspecting changes using the history | 
-|  | Undoing changes with the history | 
-|  | Marking the history using tags | 
+| Episode | Topic                                                       |
+| :------ | :---------------------------------------------------------- |
+| **1.1** | **Git repositories for version control**                    |
+|         | Introduction to Git                                         |
+|         | Git command syntax and getting help                         |
+|         | Creating an empty repository                                |
+| **1.2** | **Tracking changes in working documents**                   |
+|         | Tracking changes with the index                             |
+|         | Not tracking and stop tracking                              |
+|         | Undoing changes with the index                              |
+|         | Deleting and renaming tracked files and directories         |
+| **1.3** | **Organising tracked changes in a history**                 |
+|         | Committing changes with a configured identity and a message |
+|         | Inspecting changes using the history                        |
+|         | Undoing changes with the history                            |
+|         | Marking the history using tags                              |
 
 ```
 ````
@@ -77,16 +77,16 @@ The learning objectives and topics of each lesson are presented below. The taxon
 - To synchronise changes between local and remote Git repositories. (*apply*)
 
 ```{dropdown} Topics
-| Episode | Topic |
-|:----|:----|
-| **2.1** | **Branching** | 
-| --- | Create, rename, change, and delete branches | 
-| --- | Develop and compare branches | 
-| --- | Visualise and merge branches and resolve conflicts | 
-| **2.2** | **Operations with remotes** | 
-| --- | Create a bare repositories |
-| --- | Cloning and pushing to upstreams |
-| --- | Syncing changes between repositories |
+| Episode | Topic                                              |
+| :------ | :------------------------------------------------- |
+| **2.1** | **Branching**                                      |
+| ---     | Create, rename, change, and delete branches        |
+| ---     | Develop and compare branches                       |
+| ---     | Visualise and merge branches and resolve conflicts |
+| **2.2** | **Operations with remotes**                        |
+| ---     | Create a bare repositories                         |
+| ---     | Cloning and pushing to upstreams                   |
+| ---     | Syncing changes between repositories               |
 
 ```
 ````
@@ -103,21 +103,21 @@ The learning objectives and topics of each lesson are presented below. The taxon
 - To create contributions to software projects using one of the Git repository platforms such as GitHub. (*create*) 
 
 ```{dropdown} Topics
-| Episode | Topic |
-|:----|:----|
-| **3.1** | **Collaborative Platforms** |
-| --- | Connecting to code repositories |
-| --- | Exploring the GitHub GUI |
-| --- | Collaborating |
-| **3.2** | **Collaborative Development for Research Software** |
-| --- | Introduction to collaboration in software projects |
-| --- | Managing research software projects |
-| --- | Organising research teams for collaborative development  |
-| **3.3** | **Collaborative Workflows** |
-| --- | Documenting issues |
-| --- | Centralise workflow: branching
-| --- | Pull requests
-| --- | Shared workflow: forking
+| Episode | Topic                                                   |
+| :------ | :------------------------------------------------------ |
+| **3.1** | **Collaborative Platforms**                             |
+| ---     | Connecting to code repositories                         |
+| ---     | Exploring the GitHub GUI                                |
+| ---     | Collaborating                                           |
+| **3.2** | **Collaborative Development for Research Software**     |
+| ---     | Introduction to collaboration in software projects      |
+| ---     | Managing research software projects                     |
+| ---     | Organising research teams for collaborative development |
+| **3.3** | **Collaborative Workflows**                             |
+| ---     | Documenting issues                                      |
+| ---     | Centralise workflow: branching                          |
+| ---     | Pull requests                                           |
+| ---     | Shared workflow: forking                                |
 
 ```
 ````
@@ -128,23 +128,23 @@ The learning objectives and topics of each lesson are presented below. The taxon
 **Learning Objectives:**
 
 - To understand the importance of contribution guidelines and best practices to manage collaboration in research software projects. (*understand*)
-- To organise the activities of a software team that participates in a collaborative development workflow. (*crate*)
+- To organise the activities of a software team that participates in a collaborative development workflow. (*create*)
 - To understand the impact of code reviews and best practices on software quality. (*understand*)
 - To perform code reviews as part of a research software team. (*apply*)
 - To discuss best practices related to code reviews, licensing, citation, semantic versioning, and software releases. (*evaluate*)
 
 ```{dropdown} Topics
-| Episode | Topic |
-|:----|:----|
-| **4.1** |  **Managing collaboration** |
-| --- | Code Reviews |
-| --- | Contributing Guidelines |
+| Episode | Topic                      |
+| :------ | :------------------------- |
+| **4.1** | **Managing collaboration** |
+| ---     | Code Reviews               |
+| ---     | Contributing Guidelines    |
 | **4.2** | **Licensing and Citation** |
-| --- | Open Source Licenses |
-| --- | Software Citation |
-| **4.3** | **Releasing Software** | 
-| --- | Semantic Versioning |
-| --- | Software Releases |
+| ---     | Open Source Licenses       |
+| ---     | Software Citation          |
+| **4.3** | **Releasing Software**     |
+| ---     | Semantic Versioning        |
+| ---     | Software Releases          |
 
 ```
 ````

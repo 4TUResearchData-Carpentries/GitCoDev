@@ -1,59 +1,43 @@
 # LESSON 1: Fundamental Operations with Git
 
-Lecture notes on the fundamental local operations with Git. A hands-on lesson for introducing version control, tracking changes, and the tracking history. 
-These notes contains the following pointers for the instructor:
+Lecture notes on the fundamental operations with Git. A hands-on lesson for introducing version control, tracking changes, and the tracking history. 
 
-* Numbers between `[]` are indicative of how much time should be spend in each topic or exercise to keep in track with the lesson [schedule.](schedule.md)
-* The text in  **Instructor note** contain explanations or reminders for the instructor. For example:
-    `````{admonition} Instructor's Note
 
-    Ensure that all users have git and bash available at the start of the course.
-    ````` 
+:::{card} Learning Objectives:
 
-````{card} 
-Presentation 
-^^^    
+* To understand the basic operations of version control using Git. 
+* To use Git to create repositories and commit changes. 
+* To apply Git operations to track, reverse and delete changes in working documents. 
+* To organise tracked changes in the Git history. 
 
-This contains general information about the lesson and illustrations for supporing the explanations of some of the concepts, and 
+**Topics:**
 
-*[Collaborative software development](https://docs.google.com/presentation/d/1BucILQ9Osz_2tKYF3kF-c3uZFND8xfJ4/edit?usp=sharing)*
-````
+{bdg-dark}`git syntax`
+{bdg-dark}`version control`
+{bdg-dark}`repositories`
+{bdg-dark}`tracking changes`
+{bdg-dark}`untracking files`
+{bdg-dark}`gitignore`
+{bdg-dark}`undoing changes`
+{bdg-dark}`deleting and renaming files`
+{bdg-dark}`committing changes`
+{bdg-dark}`inspecting changes`
+{bdg-dark}`tags`
 
-## Learning Objectives
++++
+**Materials:**
 
-:::{card}
-- To understand the basic operations of version control using Git. (*understand*)
-- To use Git to create repositories and commit changes. (*apply*)
-- To apply Git operations to track, reverse and delete changes in working documents. (*apply*)
-- To organise tracked changes in the Git history. (*understand*)
+* [Collaborative software development](https://docs.google.com/presentation/d/1BucILQ9Osz_2tKYF3kF-c3uZFND8xfJ4/edit?usp=sharing): a presentation that introduces the workshop and contains slides with this lesson exercises.
 :::
 
-## Key Topics
 
-* What are Version Control and Git
-* Git Command syntax and getting help
-* Creating an Empty Repository
-* Tracking Changes in Working Documents
-  * With the Index
-  * Tracking Directories
-  * Ignoring and untracking files
-  * Ignoring untracked directories
-* Undoing changes
-  * Undoing changes with the Index
-  * Deleting and renaming tracked files and directories
-* Sequencing changes into a history
-  * Committing changes
-  * Inspecting changes using the history
-  * Undoing changes with the history
-  * Marking the history with tags
+## {octicon}`repo` Episode 1: Git repositories for version control
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`ca 50 min total`
 
-
-
-## Episode 1: Git repositories for version control
-**[ca 50 min total]** 
 
 ### 1.1.0 Welcome slides
-**[10 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
+
 
 Introduce:
 * Trainers
@@ -64,11 +48,11 @@ Introduce:
 * The role of git as a software solution supporting these goals
 
 ### 1.1.1 Introduction to Git
-**[10 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
 
 * Create a directory for the course
 
-:::{admonition} Instructor's Note 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 Students are assumed to have at least basic awareness of working from the command line and navigating the directory tree,
 but help them if necessary.
@@ -106,7 +90,8 @@ the Desktop may or may not actually be under the participants' home directory so
 ```
 
 ### 1.1.2 Git Command Syntax and Getting Help
-**[10 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
+
 
 * We indtoduce the git help system both as a resource that they can use in future, and a way to start getting used to the CLI interface and command format.
 
@@ -134,13 +119,15 @@ Introduce the key config parameterts, including pre-setting some that only apply
 ```
 
 ### 1.1.3. Creating an Empty Reposiory
-**[10 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
 
-````{admonition} Instructor's Note
-    Here and throughout, it is possible to edit the file with an editor rather than appending
-    lines with *echo*, however this will make the nature of the changes invisible in any
-    gitautopush record, so is not recommended in class.
-````
+
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
+:class: tip
+Here and throughout, it is possible to edit the file with an editor rather than appending
+lines with *echo*, however this will make the nature of the changes invisible in any
+gitautopush record, so is not recommended in class.
+:::
 
 * We add some content to a file and observe that, where no repo has been initialised, operations like 'git status' don't do very much.
 * We follow this with a git init.  It is important to be sure that all participants are actuall in the correct directory when they do this.
@@ -170,20 +157,23 @@ The *git status* command above should return a fatal error because we are not in
 ```
 
 ### 1.1.4. Q&A
-**[10 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
+
 
 At this point, we have an empty repository, plus a single file in a working directory that has not been added to the repository.
 Students have had a brief view (via *ls -af .git*) of the inner contents of the repository proper, but should not be encouraged to dig
 too deeply at this point.
 
-### Short Break
-**[10 min]**
+### {octicon}`stopwatch` Break
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
 
-## Episode 2: Tracking Changes in Working Documents
-**[ca 75 min instruction + 20 min break]**
+
+## {octicon}`repo` Episode 2: Tracking Changes in Working Documents
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`ca 75 min`
 
 ### 1.2.1 Tracking Changes with the Index
-**[10 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
+
 
 * In this section, we observe that a file in the working directory that has not been explicitly added to the repo is observed by git status, but not yet tracked.  So we introduce the git add command and, alongside it, git diff.
 
@@ -194,9 +184,10 @@ too deeply at this point.
     ls -a .git
     git diff lines.txt
 ```
-````{admonition} Instructor's Note
-    The only visible difference between the output of this and the previous *ls -a .git* is the appearance of the *index*
-````
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
+:class: tip
+The only visible difference between the output of this and the previous *ls -a .git* is the appearance of the *index*
+:::
 
 ```shell
     echo 'third line' >>lines.txt
@@ -229,8 +220,7 @@ The output of the *git diff* command should resemble the following. Use this opp
 
 
 ````{card} 
-Exercise 1 --- Tracking changes with the Index
-**[5 min]**
+{bdg-dark}`Exercise 1.1` --- Tracking changes with the Index
 ^^^    
 
 ```{include} exercises/L1-ex01.md
@@ -244,12 +234,13 @@ Exercise 1 --- Tracking changes with the Index
 ````
 
 #### Tracking Directories
-**[10 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
 
-````{admonition} Instructor's Note
-    In this section, we see that while empty directories are not tracked or `seen' by git,
-    adding a directory to the index automatically adds its contents.
-````
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
+:class: tip
+In this section, we see that while empty directories are not tracked or `seen' by git,
+adding a directory to the index automatically adds its contents.
+:::
 
 ```shell
     mkdir directory
@@ -279,14 +270,17 @@ Exercise 1 --- Tracking changes with the Index
 * git status here should report emptyfile.txt as staged but not committed
 
 ### 1.2.2 Not Tracking and Stop Tracking
-**[10 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
 
-````{admonition} Instructor's Note
-    In this section, we introduce the .gitignore mechanism. It is worth taking a few minutes to talk about the kinds
-    of files associated with a project that you might not want to track, such as IDE configurations, Apple .DS_Store
-    files, log files, test run outputs etc. We don't want these cluttering up our git status output, or accidentally
-    messing up our coleagues' work environments.
-````
+
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
+:class: tip
+In this section, we introduce the .gitignore mechanism. It is worth taking a few minutes to talk about the kinds
+of files associated with a project that you might not want to track, such as IDE configurations, Apple .DS_Store
+files, log files, test run outputs etc. We don't want these cluttering up our git status output, or accidentally
+messing up our coleagues' work environments.
+:::
+
 * First, we generate a random log file of the kind we don't want to track.
 
 ```shell
@@ -316,10 +310,11 @@ Exercise 1 --- Tracking changes with the Index
     echo 'lines.txt' >>.gitignore
     cat .gitignore
 ```
-````{admonition} Instructor's Note
-    Adding lines.txt, as we can see in the git status output, does not remove lines.txt from the index,
-    and git continues to track it, but would not start tracking it or offer it for staging if it were new.
-````
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
+:class: tip
+Adding lines.txt, as we can see in the git status output, does not remove lines.txt from the index,
+and git continues to track it, but would not start tracking it or offer it for staging if it were new.
+:::
 
 ```shell 
     git status 
@@ -329,14 +324,16 @@ Exercise 1 --- Tracking changes with the Index
 * .gitignore is a regular file and will be tracked unless listed in .gitignore. Whether or not this is a good idea for a particular project is up to the collaborators.
 
 #### Ignore Untracked Directories
-**[10 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
 
-```{admonition} Instructor's Note
-    This section illustrates three points:
-    * That git ignores the contents of directories that match a line in .gitignore,
-    * That ! is a not operatory for matching purposes
-    * That git will implement the 'last rule standing' after parsing .gitignore
-```
+
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
+:class: tip
+This section illustrates three points:
+* That git ignores the contents of directories that match a line in .gitignore,
+* That ! is a not operatory for matching purposes
+* That git will implement the 'last rule standing' after parsing .gitignore
+:::
 
 ```shell
     touch directory/trackme.txt
@@ -372,8 +369,7 @@ Exercise 1 --- Tracking changes with the Index
 
 
 ````{card} 
-Exercise 2 --- Stop tracking Changes in a File
-**[5 min]**
+{bdg-dark}`Exercise 1.2` --- Stop tracking Changes in a File
 ^^^    
 
 ```{include} exercises/L1-ex02.md
@@ -386,16 +382,19 @@ Exercise 2 --- Stop tracking Changes in a File
 ```
 ````
 
-### Longer Break
-**[20 min]**
+### {octicon}`stopwatch` Break
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`20 min`
+
 
 ### 1.2.3 Undoing Changes with the Index
-**[10 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
 
-```{admonition} Instructor's Note
-    The central idea here is the use of git restore to 'undo' changes to tracked files in the working directory from
-    the index, not from the commit history, as we haven't introduced that yet.
-```
+
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
+:class: tip
+The central idea here is the use of git restore to 'undo' changes to tracked files in the working directory from
+the index, not from the commit history, as we haven't introduced that yet.
+:::
 
 ```shell
     cat lines.txt 
@@ -432,12 +431,14 @@ Exercise 2 --- Stop tracking Changes in a File
 ```
 
 ### 1.2.4  Deleting and renaming tracked files and directories
-**[10 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
 
-```{admonition} Instructor's Note
-    Here we illustrate the need to use git's utilities to delete or rename files
-    that are tracked in the repo, if their history is to be properly maintained.
-```
+
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
+:class: tip
+Here we illustrate the need to use git's utilities to delete or rename files
+that are tracked in the repo, if their history is to be properly maintained.
+:::
 
 ```shell
     git rm --cached directory/donttrackme.txt 
@@ -477,8 +478,7 @@ Exercise 2 --- Stop tracking Changes in a File
 ```
 
 ````{card} 
-Exercise 3 --- Renaming Tracked Files
-**[5 min]**
+{bdg-dark}`Exercise 1.3` --- Renaming Tracked Files
 ^^^    
 
 ```{include} exercises/L1-ex03.md
@@ -491,18 +491,19 @@ Exercise 3 --- Renaming Tracked Files
 ```
 ````
 
-## Episode 3: Organizing Tracked Changes in a History
-**[ca 75 min + 10 min break]**
+## {octicon}`repo` Episode 3: Organizing Tracked Changes in a History
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`ca 75 min`
 
-```{admonition} Instructor's Note
-    This is a critical moment in the lesson. We have introduced the index, as a representation
-    of the project at a point in time. Now we begin to develop the idea of the repository as a
-    sequence of such staged changes over time that culminate in the current state of the project
-    (or branch, but we haven't introduced that concept yet), HEAD.
-```
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
+:class: tip
+This is a critical moment in the lesson. We have introduced the index, as a representation
+of the project at a point in time. Now we begin to develop the idea of the repository as a
+sequence of such staged changes over time that culminate in the current state of the project
+(or branch, but we haven't introduced that concept yet), HEAD.
+:::
 
 ### 1.3.1 Commiting Changes with a Configured Identify and a Message
-**[10 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
 
 * We introduce the 'git commit' command as an commitment of the state of the index at some point in time.
 * We note that a commit MUST be accompanied by a descriptive message
@@ -523,8 +524,8 @@ Exercise 3 --- Renaming Tracked Files
 
 
 `````{card} 
-Exercise 4 --- Commit Changes in a Tracked File
-**[5 min]**
+{bdg-dark}`Exercise 1.4` --- Commit Changes in a Tracked File
+
 ^^^    
 
 ````{include} exercises/L1-ex04.md
@@ -547,8 +548,7 @@ Exercise 4 --- Commit Changes in a Tracked File
 
 
 `````{card} 
-Exercise 5 --- Follow the state of the repository in the commit routine
-**[5 min]**
+{bdg-dark}`Exercise 1.5` --- Follow the state of the repository in the commit routine
 ^^^    
 
 ````{include} exercises/L1-ex05.md
@@ -576,8 +576,7 @@ Exercise 5 --- Follow the state of the repository in the commit routine
 
 
 `````{card} 
-Exercise 6 --- Follow the state of the index in the commit routines
-**[5 min]**
+{bdg-dark}`Exercise 1.6` --- Follow the state of the index in the commit routines
 ^^^    
 
 ````{include} exercises/L1-ex06.md
@@ -652,12 +651,12 @@ Exercise 6 --- Follow the state of the index in the commit routines
 ````
 `````
 
-###Short break
-**[10 min]**
+### {octicon}`stopwatch` Break 
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
+
 
 `````{card} 
-Exercise 7 --- Explore the changes recorded in the history
-**[5 min]**
+{bdg-dark}`Exercise 1.7` --- Explore the changes recorded in the history
 ^^^    
 
 ````{include} exercises/L1-ex07.md
@@ -674,13 +673,15 @@ Exercise 7 --- Explore the changes recorded in the history
 
 
 ### 1.3.3 Undoing Changes with the History
-**[10 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
 
-```{admonition} Instructor's Note
 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
+:class: tip
 This topic involves using `git restore`.
 We have introduced the HEAD~x notation in the exercises above, and we will introduce both the short form commit ID and the tag mechanism shortly.  Here we see that using the -s flag we can specify a source (commit) from which to restore a specified file. 
-```
+:::
+
 ```shell
     git restore -s HEAD~2 Lines.txt
     cat Lines.txt
@@ -691,7 +692,7 @@ We have introduced the HEAD~x notation in the exercises above, and we will intro
 
 
 ### 1.3.4 Marking the History Using Tags
-**[10 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
 
 * Lightweight tags
 * Using the git tag mechanism, we can 'name'specified commits for ease of reference.  These may represent special points in a project, like releases, or particular points in the development lifecycle, or just be useful 'bookmarks'.
@@ -755,8 +756,7 @@ We have introduced the HEAD~x notation in the exercises above, and we will intro
 
 
 `````{card} 
-Exercise 9 --- Add lightweight tags to the history
-**[5 min]**
+{bdg-dark}`Exercise 1.9` --- Add lightweight tags to the history
 ^^^    
 
 ````{include} exercises/L1-ex09.md
@@ -787,14 +787,14 @@ Exercise 9 --- Add lightweight tags to the history
     true
 ```
 
-## Wrap Up
-**[10 min]**
+## {octicon}`log` Lesson Summary
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
 
-```{note}
-Give a short wrap up about what has been learned. Encourage questions and perhaps give a 'teaser trailer' for day 2.
-```
 
-```{admonition} Instructor's Note
+Give a short wrap up about what has been learned. Encourage questions and perhaps give a 'teaser trailer' for lesson 2.
 
+
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
+:class: tip
 Remember to coordinate with the trainer for day 2 to ensure that they have a repository that begins day 2 with the same state as the learners, either by their rerunning the command log, or by physically copying your repo in a ZIP or tarfile.
-```
+:::

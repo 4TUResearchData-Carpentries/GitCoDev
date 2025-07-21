@@ -10,38 +10,54 @@ Lecture notes for the lesson on an introduction to collaborative software develo
 - To choose between a centralised and shared collaborative workflow for a new software project. 
 - To create contributions to software projects using one of the Git repository platforms such as GitHub. 
 
+**Topics:**
+
+{bdg-dark}`collaborative platforms`
+{bdg-dark}`GitHub GUI`
+{bdg-dark}`research software projects`
+{bdg-dark}`managing projects`
+{bdg-dark}`organising teams`
+{bdg-dark}`collaborative workflows`
+{bdg-dark}`documenting issues`
+{bdg-dark}`centralised workflow`
+{bdg-dark}`shared workflow`
+{bdg-dark}`pull requests`
+
 +++
-Materials:
+**Materials:**
 
 * [Collaborative software development](https://docs.google.com/presentation/d/1yBy_4r9aHhsUH9AH1s7zLWIQ_h20xNKVYM1somPnz1Q/edit?usp=sharing): a presentation with general information about the lesson and illustrations for supporing the explanations of some of the concepts, and exercises.
 * [Username form](https://forms.gle/asj6dAhTh6vcyUhV9): a Google form to collect users-names of the collaborative platform that participants will use during the lesson. This serves as an example. 
+
 :::
 
 
-## Preparation
+## {octicon}`tasklist` Preparation  
 
-:::{admonition} Instructor's Note 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
-* The instructor must collect particiapant's user names for GitHub/Gitlab the day before, so that they can be invited to collaborative repositories. The **username form** above could be use for that.
-* The instructor must create a repository for [](check-in) using this [respository tempalte](https://github.com/manuGil/check-in-template).
+* The instructor must collect particiapant's user names for GitHub/Gitlab beforehand, so that they can be invited to collaborative repositories. The **username form** serves as an example of how this could be done.
+* The instructor must create a repository for [](check-in) using this [respository tempalte](https://github.com/WorkshopGitcodev/check-in-template).
 :::
 
 
-## Recapitulation: Operations with Remotes 
-**[5 min]**
+## {octicon}`history` Recapitulation: Operations with Remotes 
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`5 min`
+
 
 Common operations with remotes
 
-:::{admonition} Instructor's Note
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 * Recapitulation on how local repostories and remotes are connected and how to work with remotes (Slides).
 * Recapitulation on what `clone, fetch, merge, pull` and `push` commands do.
 :::
 
-## Episode 1: Collaborative Platforms
+## {octicon}`repo` Episode 1: Collaborative Platforms
 
 ### 3.1.1. Connecting to Code Repositories  
-**[10 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
+
 
 * Ask participants using Windows not to start Git Bash clicking on the desktop icon, as they did in Lesson 1. Instead,
     * use the app menu (the Windows logo)
@@ -50,7 +66,7 @@ Common operations with remotes
     The participants may need to type in their credentials as local administrators.
 This gain authority to have SSH installing its own features in their laptop next.
 
-:::{admonition} Instructor's Note
+:::{admonition} {octicon}`mortar-board` Instructor's Note  
 :class: tip
 At their very first `git push`, Git might complain about a mismatch between the credentials of local and global administrator.
 The warning itself suggests another Git command as the remedy to this impasse.
@@ -58,7 +74,7 @@ The warning itself suggests another Git command as the remedy to this impasse.
 
 #### Setting up SSH connection for GitHub
 
-:::{admonition} Instructor's Note
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 GitHub requires authentication via SSH to do pulls and pushes, but not for cloning public repositories. Explain what a SSH connection entitles (slides).
 
@@ -101,7 +117,7 @@ Some participants might have already set up SSH keys for GitHub. In this case, t
             ssh -i <path/private/keyfile>
         ```
 
-        :::{admonition} Instructor's Note
+        :::{admonition} {octicon}`mortar-board` Instructor's Note 
         :class: tip
         Window's user would need to set up the *ssh-agent** to [start the automatically](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-git-for-windows)
         Mac and Linux user don't have to worry about this.
@@ -111,7 +127,7 @@ Some participants might have already set up SSH keys for GitHub. In this case, t
             clip < .ssh/id_ed25519.pub
         ```
 
-        :::{admonition} Instructor's Note
+        :::{admonition} {octicon}`mortar-board` Instructor's Note 
         :class: tip
         Go to GitHub, explain the basics of the interface and
         :::
@@ -126,13 +142,14 @@ Some participants might have already set up SSH keys for GitHub. In this case, t
             ssh -T git@github.com
         ```
 
-        :::{admonition} Instructor's Note
+        :::{admonition} {octicon}`mortar-board` Instructor's Note 
         :class: tip
         The message for a successful outcome is friendly and plain. Ask participants whether git@github.com has welcomed them.
         :::
 
 #### Publishing Local Repository to GitHub 
-**[5 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`5 min`
+
 
 1. Create GitHub Repo: Go to GitHub and create an public empty repository called `workshop`. Repo description: *workshop on collaborative development*
 
@@ -156,17 +173,17 @@ In your local repository (on the terminal), add the remote repository and push t
 #### Check the Content is in GitHub
 Go back to your repo page and refresh the browser.
 
-:::{admonition} Instructor's Note
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 Questions?
 :::
 
 ### 3.1.2. Exploring the GitHub GUI 
-**[5 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`5 min`
 
 Collaborative platforms host and manage remote repositories to facilitate descentrilized collaborative development workflows.
 
-:::{admonition} Instructor's Notes
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 Ask participants if they are familiar with GitHub. If not, give a short explanation of what it is for how to explore the GUI.
 
@@ -175,9 +192,10 @@ Mention GitLab at TU Delft as an alternative for a collaborative platform: https
 
 (check-in)=
 ### 3.1.3. Collaborating 
-**[5 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`5 min`
 
-Participants are invited as collaborators to the **check-in** repository. A template to create a new repository is available in the [check-in template](https://github.com/manuGil/check-in-template).
+
+Participants are invited as collaborators to the **check-in** repository. A template to create a new repository is available in the [check-in template](https://github.com/WorkshopGitcodev/check-in-template).
  Participants must have permission to merge pull requets.
 
 1. Demo on how to invite collaborators using the **check-in** repository.
@@ -185,7 +203,7 @@ Participants are invited as collaborators to the **check-in** repository. A temp
 2. Paticipant accept inviation via email or GitHub notifications.
 
 ````{card} 
-Exercise 1 --- Startig with Collaboration [10 mins]
+{bdg-dark}`Exercise 3.1` --- Startig with Collaboration
 ^^^    
 
 ```{include} exercises/L3-ex01.md
@@ -193,12 +211,13 @@ Exercise 1 --- Startig with Collaboration [10 mins]
 
 ````
 
-## Episode 2: Collaborative Development for Research Software
+## {octicon}`repo` Episode 2: Collaborative Development for Research Software
 
 ### 3.2.1.   Introduction to collaboration in software projects 
-**[5 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`5 min`
 
-:::{admonition} Instructor's Note
+
+:::{admonition} {octicon}`mortar-board` Instructor's Note
 :class: tip
 * A Quick introduction to collaborative development. Provide a short explanation on what it is and why it is important for research software development:
 
@@ -214,9 +233,10 @@ Topic to cover:
 :::
 
 ### 3.2.2 Managing Research Software Projects 
-**[2 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`2 min`
 
-:::{admonition} Instructor's Note
+
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 Explain the following topics:
 
@@ -231,11 +251,13 @@ Explain the following topics:
 :::
 
 ### 3.2.3 Organising Research Team for Collaborative Development 
-**[3 mins]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`14 min`
 
-:::{admonition} Instructor's Note
+
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 **Rores and Responsibilities**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`3 min`
 
 Describe the responsibilities for each role and why they are important for a research-software development project.
 
@@ -245,11 +267,12 @@ Describe the responsibilities for each role and why they are important for a res
 - Reviewer
 - Collaborator
 
-> Questions? [10 min]
+> Questions? 
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`5 min`
 :::
 
 ````{card} 
-Exercise 2 --- Roles and Responsibilities
+{bdg-dark}`Exercise 3.2` --- Roles and Responsibilities
 ^^^    
 
 ```{include} exercises/L3-ex02.md
@@ -257,14 +280,15 @@ Exercise 2 --- Roles and Responsibilities
 
 ````
 
-## Episode 3: Collaborative Workflows 
+## {octicon}`repo` Episode 3: Collaborative Workflows 
 
 ### 3.3.1. Documenting Issues
-**[8 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`8 min`
+
 
 Issues help to document ideas and tasks in a development project. They facilitate planning, discussing  and tracking the progress of a software project.
 
-:::{admonition} Instructor's Note
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 Do-along. Instruct participants on how to crate issues in the repository used in [](check-in). Participants create at least one issue in such repository.
 :::
@@ -278,13 +302,13 @@ Two common estrategies that use version control and collaborative platforms as l
 (branching)=
 ### 3.3.2. Centralised Workflow: Branching
 
-:::{admonition} Instructor's Note
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 A short explanation on the branching workflow.
 :::
 
 ````{card} 
-Exercise 3 --- Branching workflow 
+{bdg-dark}`Excercise 3.3` --- Branching workflow 2
 ^^^    
 
 ```{include} exercises/L3-ex03.md
@@ -293,17 +317,19 @@ Exercise 3 --- Branching workflow
 ````
 
 ### 3.3.3. Pull Requests 
-**[5 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`5 min`
+
 
 Explaination of what pull request are, and a live demonstation on a code repository ( e.g., GitHub or GitLab).
 Then teams follow the steps in the exercise below to create and merge pull requests.
 
-```{admonition} Instructor's Note
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
+:class: tip
 Ask participant if they already have experience with making pull request. Adapt your explanation accordingly.
-```
+:::
 
 ````{card} 
-Exercise 3 --- Pull requests [6 min]
+{bdg-dark}`Exercise 3.4` --- Pull requests
 ^^^    
 
 ```{include} exercises/L3-ex04.md
@@ -312,13 +338,14 @@ Exercise 3 --- Pull requests [6 min]
 ````
 
 ### 3.3.4. Shared Workflow: Forking 
-**[5 min]**
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`5 min`
+
 
 A short explanation on the forking and branching workflow for managing contribution to code reposiotries.
 
 
 ````{card} 
-Exercise 3 --- Forking Workflow
+{bdg-dark}`Exercise 3.5` --- Forking Workflow
 ^^^    
 
 ```{include} exercises/L3-ex05.md
@@ -326,13 +353,14 @@ Exercise 3 --- Forking Workflow
 
 ````
 
-:::{admonition} Instructor's Note
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 Ask participants if they have Questions.
 :::
 
-## Lesson Summary
-**[5 min]**
+## {octicon}`log` Lesson Summary
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`5 min`
+
 
 - SHH is a secure way to connect to Code repositories.
 - Collaborative workflows provide a way to organize a team around a software project.

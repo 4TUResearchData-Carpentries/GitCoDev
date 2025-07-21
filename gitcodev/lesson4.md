@@ -5,25 +5,34 @@ Most of the content in this lesson aims to present some best-practices for devel
 
 :::{card} Learning Objectives:
 
-- To understand the importance of contribution guidelines and best practices to manage collaboration in research software projects.
-- To organise the activities of a software team that participates in a collaborative development workflow. 
-- To understand the impact of code reviews and best practices on software quality.
-- To perform code reviews as part of a research software team. 
-- To discuss best practices related to code reviews, licensing, citation, semantic versioning, and software releases. 
+* To understand the importance of contribution guidelines and best practices to manage collaboration in research software projects.
+* To organise the activities of a software team that participates in a collaborative development workflow. 
+* To understand the impact of code reviews and best practices on software quality.
+* To perform code reviews as part of a research software team. 
+* To discuss best practices related to code reviews, licensing, citation, semantic versioning, and software releases. 
 
+**Topics:**
+
+{bdg-dark}`managing collaboration`
+{bdg-dark}`code reviews`
+{bdg-dark}`guidelines for contributions`
+{bdg-dark}`licensing`
+{bdg-dark}`software citation`
+{bdg-dark}`semantic versioning`
+{bdg-dark}`software releases`
 
 +++
 Materials:
 
-[Managing collaboration and best practices](https://docs.google.com/presentation/d/1TvWIrBsVNwmEyvZodd4V7gueATeECKMubUqSSYKMyuU/edit?usp=sharing): a presentation with  general information about the lesson and illustrations for supporing the explanations of some of the concepts, and exercises. 
+* [Managing collaboration and best practices](https://docs.google.com/presentation/d/1TvWIrBsVNwmEyvZodd4V7gueATeECKMubUqSSYKMyuU/edit?usp=sharing): a presentation with  general information about the lesson and illustrations for supporing the explanations of some of the concepts, and exercises. 
 :::
 
-## i. Recapitulation: Collaborative Workflows
+## {octicon}`history` Recapitulation: Collaborative Workflows
 
 Participants complete a group exercise to recapitulate the content of Lesson 3.
 
 ````{card} 
-Exercise 1 --- Implement a Collaborative Workflow 
+{bdg-dark}`Exercise 4.1` --- Implement a Collaborative Workflow 
 ^^^    
 
 ```{include} exercises/L4-ex01.md
@@ -31,7 +40,7 @@ Exercise 1 --- Implement a Collaborative Workflow
 ````
 
 
-## Episode 1: Managing Collaboration
+## {octicon}`repo` Episode 1: Managing Collaboration
 
 ### 4.1.1. Code Reviews
 
@@ -64,7 +73,7 @@ The instructor demonstrates how to conduct a code review on the collaborative pl
 
 
 ````{card} 
-Exercise 2 --- Code Reviews [10 mins]
+{bdg-dark}`Exercise 4.2` --- Code Reviews
 ^^^    
 
 ```{include} exercises/L4-ex02.md
@@ -92,14 +101,14 @@ The instructor facilitess a discussion on the importance of contributing guideli
 
 
 ````{card} 
-Exercise 3 --- Guidelines for Contributions [10 mins]
+{bdg-dark}`Exercise 4.3` --- Guidelines for Contributions 
 ^^^    
 
 ```{include} exercises/L4-ex03.md
 ```
 ````
 
-## Episode 2: Licensing and Citation
+## {octicon}`repo` Episode 2: Licensing and Citation
 
 Explain and discuss the importance of software licenses and software citation for software. 
 
@@ -125,14 +134,14 @@ Provide a demo on how to create `.cff` files using this [CFFInit Tool](https://c
 
 
 ````{card} 
-Exercise 3 --- Choosing Licenses and Enabling Software Citation [10 mins]
+{bdg-dark}`Exercise 4.4 --- Choosing Licenses and Enabling Software Citation
 ^^^    
 
 ```{include} exercises/L4-ex04.md
 ```
 ````
 
-## Episode 3: Releasing Software
+## {octicon}`repo` Episode 3: Releasing Software
 
 Releasing software is an important step in the software development process. It allows developers to share their work with others and to get feedback on their code. It also allows users to use the software and to report bugs or issues.
 
@@ -148,7 +157,7 @@ Demonstrate how to create a software release in the collaborative platform used 
 
 Explain and discuss the role and importance of [keeping a changelog](https://keepachangelog.com/en/1.0.0/) file in the software repository. A changelog file is a file that contains a list of changes made to the software, such as bug fixes, new features, and improvements. It is important to keep a changelog file up to date so that users can see what has changes between releases, and how those changes may affect them.
 
-## Lesson Summary
+## {octicon}`log` Lesson Summary
 **[5 mins]**
 
 - Code reviews a essential to produce high quality software.

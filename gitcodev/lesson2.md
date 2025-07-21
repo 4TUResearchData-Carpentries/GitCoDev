@@ -1,5 +1,7 @@
 # LESSON 2: Branching and remote operations
 
+TODO: add a short description of the lesson
+
 <!-- This is a summary of the lecture notes for this lesson.
 The original list of commands has been edited and decorated with headings corresponding to the [lessons in the curriculum](course-units) more clearly. 
 Some commands have been either removed or relocated or added for clarity and help self-study after the lesson.
@@ -14,60 +16,65 @@ The original list of commands is available at this commit [as displayed by GitHu
 <!-- ````{note}
 The list of commands below has been grouped arbitrarily for readability's sake.
 ```` -->
----
 
+:::{card} Learning Objectives:
 
-## Learning objectives:
+* Understand the concept of branches in Git repositories.
+* Apply Git operations to create and merge branches in a local Git repository.
+* Understand the concepts of bare and remote Git repositories.
+* Clone and push changes to remote Git repositories.
+* Synchronise changes between local and remote Git repositories.
 
-:::{card}
-* Understand the concept of **branches** in Git repositories.
-* Apply Git operations to **create** and **merge** branches in a local Git repository.
-* Understand the concepts of **bare** and **remote** Git repositories.
-* **Clone** and **push** changes to remote Git repositories.
-* **Synchronise** changes between local and remote Git repositories.
+**Topics:**
+
+{bdg-dark}`create branches`
+{bdg-dark}`merge branches`
+{bdg-dark}`remote reponsitories`
+{bdg-dark}`clone repositories`
+{bdg-dark}`push changes`
+{bdg-dark}`sync changes`
+
++++
+**Materials:**
+
+* ??
+
 :::
 
+## {octicon}`history` Recapitulation: Fundamental Git Operations
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`5 min`
 
+The lesson start with a quick recap of lesson 1 and introduce lesson 2.
 
----
-
-:::{admonition} Instructor's Note 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
-<!-- 1. The instructor should start with a recap from lesson lesson 1 and introduce lesson 2.  -->
-The following *tasks* are expected from the instructor:
 
-1. *Confirm the participants have Git correctly setup from lesson 1*
-2. *Ensure everyone has configured a repository for lesson 1*
-3. *Ask participants for question related to lesson 1*
-
-If times allow, explain:
-4. *The schedule of the lesson 2*
-5. *The [**topics**](https://manugil.github.io/GitCoDev/curriculum.html) fot the lesson 2*
+1. *Confirm the participants have a repository with at the state where  lesson 1 ended*
+2. *Ask participants for question related to lesson 1*
+3. *Explain the schedule for this lesson 2*
 :::
-
-
 
 
 
 <!-- ### Schedule
-| 13:00  | 13:50 | 14:00 | 14:50 | 15:10 | 16:00 | 16:10 | 17:00 | 17:10 |
-|:-------|:------|:------|:------|:------|:------|:------|:------|:------|
-| Teaching 50' | **Break 10'** | Teaching 50' | **Break 20'** | Teaching 50' | **Break 10'** | Teaching  50'| **Wrap-up 10'** | Closure | -->
+| 13:00        | 13:50         | 14:00        | 14:50         | 15:10        | 16:00         | 16:10         | 17:00           | 17:10   |
+| :----------- | :------------ | :----------- | :------------ | :----------- | :------------ | :------------ | :-------------- | :------ |
+| Teaching 50' | **Break 10'** | Teaching 50' | **Break 20'** | Teaching 50' | **Break 10'** | Teaching  50' | **Wrap-up 10'** | Closure | --> |
 
 
 <!-- 
-| Episode | Topic | Time |
-|:----|:----|:----|
-| **2.1** | **Branching** | **13:00**| 
-| --- | Create, rename, change, and delete branches | -|
-| --- | Develop and compare branches | -|
-| --- | Visualise and merge branches and resolve conflicts |-| 
-| **2.2** | **Operations with remotes** | **15:00**|
-| --- | Create a bare repositories |-|
-| --- | Cloning and pushing to upstreams |-|
-| --- | Syncing changes between repositories |-| -->
+| Episode | Topic                                              | Time      |
+| :------ | :------------------------------------------------- | :-------- |
+| **2.1** | **Branching**                                      | **13:00** |
+| ---     | Create, rename, change, and delete branches        | -         |
+| ---     | Develop and compare branches                       | -         |
+| ---     | Visualise and merge branches and resolve conflicts | -         |
+| **2.2** | **Operations with remotes**                        | **15:00** |
+| ---     | Create a bare repositories                         | -         |
+| ---     | Cloning and pushing to upstreams                   | -         |
+| ---     | Syncing changes between repositories               | -         | --> |
 
-<!-- :::{admonition} Instructor's Note 
+<!-- :::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 For *steps 1 and 2* from previous Instructor's Note, the following actions may help you with the setup of the lesson:
 
@@ -137,21 +144,18 @@ eigth line
 <!-- **Note:** For this lesson, we will use **main** as the primary branch name instead of **master**. All commands, outputs, and instructions referring to the primary branch are intended to use **main**. Please ensure your repository is configured accordingly. -->
 <!-- ::: -->
 
-## Episode 1: Understanding Branches
+## {octicon}`repo` Episode 1: Understanding Branches
 
 <!-- **Objetive**: Introduce basic branch operations and concepts -->
 
-:::{admonition} Instructor's Note 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 1. Ask what they understand about Branches in Git
 2. Explain in a nushell what are Branches in Git
 3. Memorise the new commands and the Branch where the instructor is `main*`
 :::
 
-
-
 ### 2.1.1 Create, rename, change and delete branches
-
 
 ```shell
 git branch                     # new command for checking the branches (output: *main)
@@ -161,7 +165,7 @@ git branch                     # verify (output: B1, *main)
 Your newly created branch (here, `B1`) will show up, but your active branch should still be `main`. Note that `B1` is just a name. You could also call your branch ``delft``, if you want.
 
 
-:::{admonition} Instructor's Note 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 A question from students may arise: *Lowercase matters?* 
 
@@ -220,7 +224,7 @@ c165327 Adding .gitignore
 0e77df2 Add first four lines
 ```
 <!-- 
-:::{admonition} Instructor's Note 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 The following *points* maybe useful to discuss with students from the previous output:
 1. *Commit Hashed:* each commit has a unique identifier. The abbreviated form (first 7 characters) is usually sufficient for referencing commits in commands.
@@ -267,7 +271,7 @@ git log --oneline              # verify (notice that main is the only branch ava
 git branch -m main foo       # known action (rename "main" to "foo" branch)
 ```
 
-:::{admonition} Instructor's Note 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 
 A question from students may arise: *is kind of best practices modifying `main` branch name?*
@@ -299,7 +303,7 @@ git branch                     # verify
 ```
 
 
-:::{admonition} Instructor's Note 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 Few recommendations to discuss and recap with students:
 - Checked-out branch: The branch you're currently working on.
@@ -333,7 +337,7 @@ A	directory/emptyfile
 Switched to branch 'b1'
 ``` -->
 
-:::{admonition} Instructor's Note 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 Understanding the `A`:
 
@@ -362,8 +366,7 @@ git log --oneline              # verify
 <!-- ![alt text](image-1.png) -->
 
 :::{card} 
-Exercise 1 --- Get familiar with branches 
-**[5 min]**
+{bdg-dark}`Exercise 2.1` --- Get familiar with branches 
 ^^^    
 
 ```{include} exercises/L2-ex01.md
@@ -414,7 +417,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ```
 <!-- 
 
-:::{admonition} Instructor's Note 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 - `On branch main`: This indicates that you are currently on the `main` branch.
 - `Changes not staged for commit`: This section lists the changes that have been made to the files in your working directory but have not yet been staged for commit.
@@ -548,7 +551,7 @@ ninth line(duplicate)
 ### 2.1.3 Visualise and merge branches, and conflict resolution
 
 
-:::{admonition} Instructor's Note 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 The objectives of this section is to:
 - Show participants how to identify what has been changed in a file between commits.
@@ -650,7 +653,7 @@ So, `|` just shows the linear flow of commits in a particular branch. -->
 git log --oneline --all --graph --decorate             # any change?
 ```
 
-:::{admonition} Instructor's Note 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 Use `--decorate` when you want to quickly understand which commits belong to which branches or tags. It’s particularly helpful when working on repositories with multiple branches and tags, as you can immediately see where each branch or tag is positioned in the commit history.
 :::
@@ -704,7 +707,7 @@ This line indicates that a diff is being generated for the file Lines.txt, compa
 
 **4. @@ -7,4 +7,3 @@:** -->
 
-<!-- :::{admonition} Instructor's Note 
+<!-- :::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 This line indicates the line numbers where the differences occur:
   * `-7,4`: The previous version had `4` lines starting from line `7`.
@@ -735,8 +738,7 @@ cat Lines.txt                                          # verify
 
 
 ````{card} 
-Exercise 2 --- Explore differences across branches
-**[5 min]**
+{bdg-dark}`Exercise 2.2` --- Explore differences across branches
 ^^^    
 
 ```{include} exercises/L2-ex02.md
@@ -759,8 +761,7 @@ Exercise 2 --- Explore differences across branches
 
 
 ````{card} 
-Exercise 3 --- Commit in a secondary branch
-**[5 min]**
+{bdg-dark}`Exercise 2.3` --- Commit in a secondary branch
 ^^^    
 
 ```{include} exercises/L2-ex03.md
@@ -881,8 +882,7 @@ git log --oneline --all --graph --parents                 # verify
 ```
 
 ````{card} 
-Exercise 4 --- A first type of merge
-**[5 min]**
+{bdg-dark}`Exercise 2.4` --- A first type of merge
 ^^^    
 
 ```{include} exercises/L2-ex04.md
@@ -905,11 +905,11 @@ Exercise 4 --- A first type of merge
     ```
 ````
 
-## Episode 2: Understanding operations with remotes
+## {octicon}`repo` Episode 2: Understanding operations with remotes
 
 ### 2.2.1 Create and explore a bare repository
 
-<!-- :::{admonition} Instructor's Note 
+<!-- :::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 Lets first explain what is a bare repository:
 
@@ -1026,7 +1026,7 @@ This command clones the bare repository `git-zero.git` into a new directory name
 git clone git-zero.git git-one                    # new command
 ```
 <!-- 
-:::{admonition} Instructor's Note 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class:tip
 - `git clone:` This command is used to create a copy of an existing Git repository. It creates a local copy from the remote repository.
 - `git-zero.git:` This is the URL or path of the remote repository that you are cloning. In this case, git-zero.git is the source repository.
@@ -1075,7 +1075,7 @@ git log                                           # observe (fatal: your current
 ```
 The git remote command is used to manage the set of repositories ("remotes") whose branches you track. These remotes are typically other repositories that you can **fetch** from and **push** to.
 
-:::{admonition} Instructor's Note 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 The following key functions of `git remote` can be explained to students:
 - `Fetching`:
@@ -1102,7 +1102,7 @@ origin	/Users/user/Desktop/2024-gitcodev/git-zero.git (fetch)
 origin	/Users/user/Desktop/2024-gitcodev/git-zero.git (push)
 ```
 
-<!-- :::{admonition} Instructor's Note 
+<!-- :::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 You can explain the following to studets:
 - `origin /Users/user/Desktop/2024-gitcodev/git-zero.git (fetch)`: This shows the URL used for fetching changes from the remote repository. When you run commands like git fetch or git pull, Git will fetch changes from the remote repository located at this path.
@@ -1186,7 +1186,7 @@ git log                                           # observe
 git remote -v                                     # observe
 ```
 
-<!-- :::{admonition} Instructor's Note 
+<!-- :::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 
 *This is the summary of `git remote -v` output*
@@ -1212,7 +1212,7 @@ git status                                        # verify
 
 The git fetch command is used to download commits, files, and references from a remote repository into your local repository. It updates your local copy of the remote branches without modifying your working directory or local branches.
 
-<!-- :::{admonition} Instructor's Note 
+<!-- :::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 These are the *key points* to explain:
 1. *Fetches Updates:* Downloads new data from the remote repository.
@@ -1238,7 +1238,7 @@ From /Users/ccugutrillague/Desktop/2024-gitcodev/git-zero
    fa26574..88ee05e  main     -> origin/main
 ```
 
-<!-- :::{admonition} Instructor's Note 
+<!-- :::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 
 The `git fetch` operation successfully downloaded new commits from the **remote repository (git-zero)** and updated the `origin/main` reference. 
@@ -1259,7 +1259,7 @@ git fetch                                          # known action
 git merge                                          # see episode 2.1 (no conflict here)
 ```
 
-<!-- :::{admonition} Instructor's Note 
+<!-- :::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 Summary of `git merge` output:
 - The `git merge` command successfully merged the changes from the specified branch into your current branch.
@@ -1347,7 +1347,7 @@ The error message you received when running git push indicates that your push wa
 
 The reason for rejection is that you need to `fetch` the latest changes from the remote repository first.
 
-<!-- :::{admonition} Instructor's Note 
+<!-- :::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 Summary of git push output:
 
@@ -1390,7 +1390,7 @@ This means that, in your local branch, there is an additional 2 that was added t
 - `=======`: This marker separates the changes between your local branch (HEAD) and the remote branch (origin/main).
 - `>>>>>>> refs/remotes/origin/main`: The lines below this marker are the changes from the remote branch (origin/main), which is the branch being merged into your local branch. -->
 
-:::{admonition} Instructor's Note 
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 
 **You can ask students about the current situation**
@@ -1427,7 +1427,7 @@ git status                                         # verify
 ```
 
 ````{card} 
-Exercise 5 --- Another type of merge **[5 min]**
+{bdg-dark}`Exercise 2.5` --- Another type of merge
 ^^^    
 
 ```{include} exercises/L2-ex05.md
@@ -1459,3 +1459,8 @@ Allows you to review changes before merging.
 * `git merge:` Merges changes from one branch into another branch.
 Directly modifies your current branch by integrating changes from the specified branch.
 Typically used to combine feature branches into the main branch. -->
+
+## {octicon}`log` Lesson Summary
+{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`5 min`
+
+TODO: add a summary of the episode with the main takeaways and concepts learned.
