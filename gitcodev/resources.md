@@ -2,7 +2,7 @@
 
 This section contains a list of resources that can be used by the intructor. The resources are divided into two categories:
 * **Teaching resources**: These are resources that can be used by the instructor to deliver the course. They include slides, tools, and other materials that can be used to support the teaching of the course.
-* **Prepartion resources**: These are resources that can be used by the instructor to adquired the knowledge and sills required to teach the topics in the course.
+* **Prepartion resources**: These are resources that can be used by the instructor to adquired the knowledge and skills required to teach the topics in the course.
 
 
 ## Teaching Resources
@@ -23,22 +23,22 @@ The following helps the instructor to set up a terminal that will show the histo
 ### Windows Terminal (Preview) 
 Shortcuts for the Windows Terminal (Preview) App on Windows 11.
 
-| Action             | Shortcut                |
-|--------------------|--------------------------|
-|Split pane horizontally | Alt + Shift + `-`   | 
-|Split pane vertically   | Alt + Shift + `+`   |
-|Close a pane            | Ctrl+Shift + `w`     |
-|Move pane focus         | Alt + `Arrow keys`   |
-|Resize the focused pane | Alt+Shift + `Arrow keys` |
+| Action                  | Shortcut                 |
+| ----------------------- | ------------------------ |
+| Split pane horizontally | Alt + Shift + `-`        |
+| Split pane vertically   | Alt + Shift + `+`        |
+| Close a pane            | Ctrl+Shift + `w`         |
+| Move pane focus         | Alt + `Arrow keys`       |
+| Resize the focused pane | Alt+Shift + `Arrow keys` |
 
 
 ### MacOS Terminal
 Shortcuts for the terminal in MacOS
 
-| Action             | Shortcut                |
-|--------------------|--------------------------|
-|Split pane horizontally | Cmd + `d`   | 
-|Close a pane            | Shift + Cmd + `d`   |
+| Action                  | Shortcut          |
+| ----------------------- | ----------------- |
+| Split pane horizontally | Cmd + `d`         |
+| Close a pane            | Shift + Cmd + `d` |
 
 
 ## Presentations

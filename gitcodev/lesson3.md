@@ -1,5 +1,7 @@
 # LESSON 3: Collaborative Software Development
-Lecture notes for the lesson on an introduction to collaborative software development. This lesson is taught using presentations (to illustrate concepts), demostrations and exercises (to practice the concepts). The code examples in the lessons often indicate tasks that participant should do along with the instructor.
+Lecture notes for the lesson on an introduction to collaborative software development. 
+This lesson is taught using presentations (to illustrate concepts), demostrations and exercises (to practice the concepts). 
+The code examples in the lessons often indicate tasks that participant should do along with the instructor.
 
 :::{card} Learning Objectives:
 
@@ -187,7 +189,7 @@ Collaborative platforms host and manage remote repositories to facilitate descen
 :class: tip
 Ask participants if they are familiar with GitHub. If not, give a short explanation of what it is for how to explore the GUI.
 
-Mention GitLab at TU Delft as an alternative for a collaborative platform: https://gitlab.tudelft.nl/
+Mention GitLab as one of the alternative for a collaborative platform. For example: https://gitlab.tudelft.nl/
 :::
 
 (check-in)=

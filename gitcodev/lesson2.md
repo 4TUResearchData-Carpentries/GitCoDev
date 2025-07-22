@@ -38,8 +38,17 @@ The list of commands below has been grouped arbitrarily for readability's sake.
 **Materials:**
 
 * ??
-
 :::
+
+## {octicon}`tasklist` Preparation  
+
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
+:class: tip
+* The instructor must have a repository with the content and state reached at the end of {ref}`sec:lesson1`.
+:::
+
+
+
 
 ## {octicon}`history` Recapitulation: Fundamental Git Operations
 {octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`5 min`

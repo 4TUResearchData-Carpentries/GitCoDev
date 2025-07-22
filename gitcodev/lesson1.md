@@ -1,3 +1,4 @@
+(sec:lesson1)=
 # LESSON 1: Fundamental Operations with Git
 
 Lecture notes on the fundamental operations with Git. A hands-on lesson for introducing version control, tracking changes, and the tracking history. 
@@ -28,6 +29,16 @@ Lecture notes on the fundamental operations with Git. A hands-on lesson for intr
 **Materials:**
 
 * [Collaborative software development](https://docs.google.com/presentation/d/1BucILQ9Osz_2tKYF3kF-c3uZFND8xfJ4/edit?usp=sharing): a presentation that introduces the workshop and contains slides with this lesson exercises.
+:::
+
+
+## {octicon}`tasklist` Preparation  
+
+:::{admonition} {octicon}`mortar-board` Instructor's Note 
+:class: tip
+* The instructor must deliver the lesson in an environment containing the latest [stable version of Git](https://git-scm.com/downloads). Participants should also have the latest version of Git installed on their machines.
+* The instructor must remove any custom configurations from the environment (i.e., Git and the shell terminal).  Personal configuation may interfere with the lesson.
+* Adjust the code examples in this lesson to reflect any changes intruduced in the latest version of Git. 
 :::
 
 
@@ -163,9 +174,6 @@ The *git status* command above should return a fatal error because we are not in
 At this point, we have an empty repository, plus a single file in a working directory that has not been added to the repository.
 Students have had a brief view (via *ls -af .git*) of the inner contents of the repository proper, but should not be encouraged to dig
 too deeply at this point.
-
-### {octicon}`stopwatch` Break
-{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
 
 
 ## {octicon}`repo` Episode 2: Tracking Changes in Working Documents
@@ -381,10 +389,6 @@ This section illustrates three points:
 
 ```
 ````
-
-### {octicon}`stopwatch` Break
-{octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`20 min`
-
 
 ### 1.2.3 Undoing Changes with the Index
 {octicon}`clock;1em;sd-text-warning` {bdg-warning-line}`10 min`
