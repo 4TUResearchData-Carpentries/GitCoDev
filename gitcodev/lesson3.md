@@ -39,7 +39,7 @@ The code examples in the lessons often indicate tasks that participant should do
 :::{admonition} {octicon}`mortar-board` Instructor's Note 
 :class: tip
 * The instructor must collect particiapant's user names for GitHub/Gitlab beforehand, so that they can be invited to collaborative repositories. The **username form** serves as an example of how this could be done.
-* The instructor must create a repository for [](check-in) using this [respository tempalte](https://github.com/WorkshopGitcodev/check-in-template).
+* The instructor must create a repository for [](check-in) using this [respository template](https://github.com/WorkshopGitcodev/check-in-template).
 :::
 
 
